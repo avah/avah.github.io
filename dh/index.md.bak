@@ -5,6 +5,8 @@ layout: dh
 date: 2020-03-21 20:23:09
 ---
 
+<html lang="zh-CN"> 
+<body>
 
         <div class="navi-height bg-cover pd-header ">
 	<div class=" link-box container">
@@ -565,12 +567,6 @@ date: 2020-03-21 20:23:09
 		}
 	}
 
-	/* 隐藏footer */
-	/* .show-footer {
-		display: none;
-	} */
-	.page-footer {
-		display: none;
-	}
-</style>
-      
+       
+    </body>
+</html>
