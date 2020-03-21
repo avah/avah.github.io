@@ -5,14 +5,30 @@ layout: dh
 date: 2020-03-21 20:23:09
 ---
 
-<!DOCTYPE HTML>
-<html lang="zh-CN">
+<html lang="zh-CN"> 
+<body>
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/matery.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="/css/my.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="/libs/highlight/styles/atom-one-dark.css"> -->
     
-
-
-
+    <!-- <style type="text/css">
         
-            <style>
+            code[class*="language-"],
+            pre[class*="language-"] {
+                white-space: pre !important;
+            }
+        
+    </style> -->
+
+<style>
     .nav-transparent .github-corner {
         display: none !important;
     }
@@ -62,29 +78,6 @@ date: 2020-03-21 20:23:09
 
 </header>
 
-        <div class="navi-height bg-cover pd-header ">
-	<div class=" link-box container">
-		<!-- 搜索框 -->
-		<div class="baidu baidu-2 large-screen">
-			<form name="f" action="https://www.baidu.com/s" target="_blank">
-				<div id="Select-2">
-					<div class="Select-box-2" id="baidu">
-						<ul style="height: 46px;">
-							<li class="this_s">百 度</li>
-							<li class="bing_s">必 应</li>
-							<li class="google_s">谷 歌</li>
-							<li class="miji_s">秘 迹</li>
-							<li class="baidu_s">百 度</li>
-						</ul>
-					</div>
-					<input name="wd" id="kw-2" maxlength="100" autocomplete="off" type="text">
-				</div>
-				<div class="qingkong" id="qingkong" title="清空" style="display: none;">x</div>
-				<input value="搜 索" id="su-2" type="submit">
-
-				<ul class="keylist"></ul>
-			</form>
-		</div>
 
 		<!-- 链接 -->
 		<div class="row tags-posts ">
@@ -198,7 +191,10 @@ date: 2020-03-21 20:23:09
 					</ul>
 				</div>
 			</div>
-		</div>	
+		</div>
+
+
+	
 	</div>
 </div>
 
@@ -521,11 +517,6 @@ date: 2020-03-21 20:23:09
 		display: none;
 	}
 </style>
-
-</div>
-
-
-
 
     </body>
 </html>
