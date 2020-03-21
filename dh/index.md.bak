@@ -8,13 +8,6 @@ date: 2020-03-21 20:23:09
 <html lang="zh-CN"> 
 <body>
 
-        <div class="navi-height bg-cover pd-header ">
-	<div class=" link-box container">
-		
-				<ul class="keylist"></ul>
-			</form>
-		</div>
-
 		<!-- 链接 -->
 		<div class="row tags-posts ">
 			<div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
