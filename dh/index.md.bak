@@ -1,516 +1,612 @@
----
-title: dh
-type: dh
-layout: dh
-date: 2020-03-21 20:23:09
----
-
-<html lang="zh-CN"> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdn.bootcss.com/zui/1.8.1/css/zui.min.css">
+<script src="https://cdn.bootcss.com/zui/1.8.1/lib/jquery/jquery.js"></script>
+<script src="https://cdn.bootcss.com/zui/1.8.1/js/zui.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<!--    -->
 <body>
+<header style="opacity: 0.7;">
+    <div class="container" style="padding-right: 0px;padding-left: 0px;">
+        <div class="main">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="images/ico.png">
+                    <span>新秀导航</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>不喜欢仰望身影，努力做一位新秀。</span>
+                </a>
+            </h1>
+        </div>
+	</div>
+	<div class="not_operational"></div>
+</header>
+<div id="content" data-customize="true" data-customtheme="true" class="default-bg">
+<div class="main-index">
+<div class="container content-box">
+	<section class="sousuo">
+	  <div class="search">
+		<div class="search-box">
+		  <img class="search-icon" src="images/logo_2.jpg">
+		  <input type="text" id="txt" class="search-input" placeholder="善用搜索">
+		  <button class="search-btn visible-sm visible-md visible-lg" id="search-btn">搜索</button>
+		  <i class="search-clear icon icon-remove-sign" style="display: none;"></i>
+		</div>
+		<!-- 搜索热词 -->
+		<div class="box search-hot-text" id="box" style="display: none;">
+		  <ul></ul>
+		</div>
+		<!-- 搜索引擎 -->
+		<div class="search-engine" style="display: none;">
+		  <div class="search-engine-head">
+			<strong class="search-engine-tit">选择默认搜索引擎：</strong>
+			<div class="search-engine-tool">搜索热词： <span id="hot-btn" class="off"></span></div>
+		  </div>
+		  <ul class="search-engine-list">
+		  </ul>
+		</div>
+	  </div>
+	</section>
+		<div class="row dh">
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">搜索 · 网页</strong></div>
+					
+					<div class="col-xs-4 mb-2">
+						<a href="#" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-<link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/css/matery.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="/css/my.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="/libs/highlight/styles/atom-one-dark.css"> -->
-    
-    <!-- <style type="text/css">
-        
-            code[class*="language-"],
-            pre[class*="language-"] {
-                white-space: pre !important;
-            }
-        
-    </style> -->
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-<style>
-    .nav-transparent .github-corner {
-        display: none !important;
-    }
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-    .github-corner {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        right: 0;
-        border: 0;
-        transform: scale(1.1);
-    }
-
-    .github-corner svg {
-        color: #0f9d58;
-        fill: #fff;
-        height: 64px;
-        width: 64px;
-    }
-
-    .github-corner:hover .octo-arm {
-        animation: a 0.56s ease-in-out;
-    }
-
-    .github-corner .octo-arm {
-        animation: none;
-    }
-
-    @keyframes a {
-        0%,
-        to {
-            transform: rotate(0);
-        }
-        20%,
-        60% {
-            transform: rotate(-25deg);
-        }
-        40%,
-        80% {
-            transform: rotate(10deg);
-        }
-    }
-</style>
-      
-		<!-- 链接 -->
-		<div class="row tags-posts ">
-			<div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-				<div class="card">
-
-					<div class="jj-list-tit">生活 · 影音</div>
-					<ul class="jj-list-con">
-						<li><a href="https://www.taobao.com/" class="link-3" target="_blank">淘宝</a></li>
-						<li><a href="https://www.tmall.com/" class="link-3" target="_blank">天猫</a></li>
-						<li><a href="https://www.jd.com/" class="link-3" target="_blank">京东</a>
-						</li>
-						<li><a href="https://v.qq.com/" class="link-3" target="_blank">腾讯视频</a></li>
-						<li><a href="http://www.iqiyi.com/" class="link-3" target="_blank">爱奇艺</a></li>
-						<li><a href="https://www.bilibili.com/" class="link-3" target="_blank">哔哩哔哩</a>
-						</li>
-						<li><a href="https://music.163.com/" class="link-3" target="_blank">网易云音乐</a></li>
-						<li><a href="https://y.qq.com/" class="link-3" target="_blank">QQ音乐</a></li>
-						<li><a href="https://www.xiami.com/" class="link-3" target="_blank">虾米音乐</a></li>
-					</ul>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 				</div>
 			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">搜索 · 磁力</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-			<div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-				<div class="card">
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-					<div class="jj-list-tit">社区 · 应用</div>
-					<ul class="jj-list-con">
-						<li><a href="https://wx.qq.com/" class="link-3" target="_blank">微信</a></li>
-						<li><a href="https://weibo.com/" class="link-3" target="_blank">微博</a></li>
-						<li><a href="https://github.com/" class="link-3" target="_blank">GitHub</a></li>
-						<li><a href="https://www.zhihu.com" class="link-3" target="_blank">知乎</a></li>
-						<li><a href="https://www.jianshu.com/" class="link-3" target="_blank">简书</a></li>
-						<li><a href="https://segmentfault.com/" class="link-3" target="_blank">思否</a></li>
-						<li><a href="https://cloud.tencent.com/developer/" class="link-3" target="_blank">云+社区</a></li>
-						<li><a href="https://www.douban.com/" class="link-3" target="_blank">豆瓣</a></li>
-						<li><a href="https://mail.qq.com/" class="link-3" target="_blank">QQ邮箱</a></li>
-					</ul>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 				</div>
 			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">搜索 · 图片</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-			<div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-				<div class="card">
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-					<div class="jj-list-tit">实用 · 工具</div>
-					<ul class="jj-list-con">
-						<li><a href="https://app.yinxiang.com" class="link-3" target="_blank">印象笔记</a></li>
-						<li><a href="https://translate.google.cn/" class="link-3" target="_blank">谷歌翻译</a></li>
-						<li><a href="https://www.uupoop.com/" class="link-3" target="_blank">在线PS</a></li>
-						<li><a href="http://naotu.baidu.com/" class="link-3" target="_blank">思维导图</a></li>
-						<li><a href="https://www.amap.com/" class="link-3" target="_blank">地图</a></li>
-						<li><a href="https://cli.im/" class="link-3" target="_blank">二维码</a></li>
-						<li><a href="http://www.qmaile.com/" class="link-3" target="_blank">vip解析</a></li>
-						<li><a href="http://simpletool.cn/" class="link-3" target="_blank">加水印</a></li>
-						<li><a href="https://www.easyicon.net/" class="link-3" target="_blank">图标下载</a></li>
-					</ul>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 				</div>
 			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">美图 · 在线</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-			<div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-				<div class="card">
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-					<div class="jj-list-tit">学习 · 课程</div>
-					<ul class="jj-list-con">
-						<li><a href="https://open.163.com/" class="link-3" target="_blank">网易公开课</a></li>
-						<li><a href="https://study.163.com/" class="link-3" target="_blank">网易云课堂</a></li>
-						<li><a href="https://www.icourse163.org/" class="link-3" target="_blank">中国大学慕课</a></li>
-						<li><a href="https://www.imooc.com/" class="link-3" target="_blank">慕课网</a></li>
-						<li><a href="http://www.icourses.cn/home/" class="link-3" target="_blank">爱课程</a></li>
-						<li><a href="https://www.coursera.org" class="link-3" target="_blank">Coursera</a></li>
-						<li><a href="http://portal.uestc.edu.cn/" class="link-3" target="_blank">成电信息门户</a></li>
-						<li><a href="http://www.lib.uestc.edu.cn/" class="link-3" target="_blank">成电图书馆</a></li>
-						<li><a href="http://bbs.uestc.edu.cn/" class="link-3" target="_blank">清水河畔</a></li>
-					</ul>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 				</div>
 			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">软件 · 绿软</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-			<div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-				<div class="card">
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-					<div class="jj-list-tit">资源 · 搜索</div>
-					<ul class="jj-list-con">
-						<li><a href="https://ac.scmor.com/" class="link-3" target="_blank">谷歌镜像</a></li>
-						<li><a href="http://www.pansoso.com/" class="link-3" target="_blank">网盘搜索</a></li>
-						<li><a href="https://www.pexels.com" class="link-3" target="_blank">壁纸搜索</a></li>
-						<li><a href="https://bing.ioliu.cn//" class="link-3" target="_blank">必应壁纸</a></li>
-						<li><a href="http://tool.mkblog.cn/music/" class="link-3" target="_blank">音乐搜索</a></li>
-						<li><a href="https://www.dytt8.net/" class="link-3" target="_blank">电影天堂</a></li>
-						<li><a href="https://www.jiumodiary.com/" class="link-3" target="_blank">鸠摩搜书</a></li>
-						<li><a href="http://www.allitebooks.org/" class="link-3" target="_blank">ALLITeBooks</a></li>
-						<li><a href="http://www.paperweekly.site/" class="link-3" target="_blank">PaperWeekly</a></li>
-					</ul>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 				</div>
 			</div>
-			<div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-				<div class="card">
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">电影 · 在线</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+					
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-					<div class="jj-list-tit">新闻 · 资讯</div>
-					<ul class="jj-list-con">
-						<li><a href="https://www.huxiu.com/" class="link-3" target="_blank">虎嗅</a></li>
-						<li><a href="https://36kr.com/" class="link-3" target="_blank">36氪</a></li>
-						<li><a href="https://www.solidot.org/" class="link-3" target="_blank">Solidot</a></li>
-						<li><a href="https://sspai.com/" class="link-3" target="_blank">少数派</a></li>
-						<li><a href="https://www.infzm.com/" class="link-3" target="_blank">南方周末</a></li>
-						<li><a href="https://www.ifanr.com/" class="link-3" target="_blank">爱范儿</a></li>
-						<li><a href="https://www.zealer.com" class="link-3" target="_blank">ZEALER</a></li>
-						<li><a href="https://cn.technode.com/" class="link-3" target="_blank">动点科技</a></li>
-						<li><a href="http://www.huanqiu.com" class="link-3" target="_blank">环球网</a></li>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
 
-					</ul>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">电影 · 下载</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">电影 · APP</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">电影 · 下载</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">电影 · APP</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">电影 · APP</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">电影 · APP</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">电影 · APP</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">电影 · APP</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 mb-3 dh">
+				<div class="row">
+					<div class="col-xs-12"><strong class="dhname" id="1">电影 · APP</strong></div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+					<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+<div class="col-xs-4 mb-2">
+						<a href="index.html" target="_blank">待添加</a>
+					</div>
+				</div>
+			</div>
 				</div>
 			</div>
 		</div>
-
-
-	
-	</div>
 </div>
 
-<style>
-	* {
-		margin: 0;
-		padding: 0;
-		font-family: "微软雅黑"
-	}
-
-	ul,
-	li,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p,
-	form,
-	dl,
-	dt,
-	dd {
-		margin: 0px;
-		padding: 0px;
-		font-size: 14px;
-		font-weight: normal;
-	}
-
-	img {
-		border-style: none;
-	}
-
-	li {
-		list-style: none;
-		float: left
-	}
-
-	a {
-		text-decoration: none
-	}
-
-	.card {
-		background-color: rgba(25, 240, 229, 0);
-		width: 96%;
-		margin-left: 2%
-	}
-
-	.baidu {
-		float: left;
-		margin-left: 100px;
-	}
-
-	.baidu form {
-		position: relative
-	}
-
-	#Select {
-		float: left;
-		border: 1px solid #ccc
-	}
-
-	.Select-box {
-		text-align: center;
-		float: left;
-		position: relative;
-	}
-
-	.Select-box ul {
-		height: 40px;
-		position: absolute;
-		left: -1px;
-		top: 0px;
-		z-index: 9999;
-		background: #FFF;
-		border: 1px solid #ccc;
-		border-top: none;
-		overflow: hidden
-	}
-
-	.Select-box li {
-		width: 60px;
-		line-height: 40px;
-		font-size: 14px;
-		color: #484848;
-		border: 0;
-		cursor: pointer;
-	}
-
-	.Select-box li:hover {
-		background: #3385ff;
-		color: #FFF;
-	}
-
-	.Select-box .this_s {
-		color: #317ef3;
-	}
-
-	.Select-box .this_s:hover {
-		background: #FFF;
-		color: #317ef3;
-	}
-
-	.qingkong {
-		position: absolute;
-		right: 120px;
-		top: 12px;
-		width: 18px;
-		height: 18px;
-		background: rgba(0, 0, 0, 0.1);
-		border-radius: 18px;
-		line-height: 16px;
-		color: #666666;
-		cursor: pointer;
-		text-align: center;
-		font-size: 14px;
-		display: none;
-	}
-
-	.qingkong:hover {
-		background: rgba(0, 0, 0, 0.2);
-	}
-
-	.qingkong:active {
-		background: rgba(0, 0, 0, 0.3);
-	}
-
-
-	.baidu-2 {
-		width: 100%;
-		height: 110px;
-		margin: 0 auto;
-		background: none;
-		padding-top: 50px;
-	}
-
-	.baidu-2 form {
-		width: 520px;
-		margin: 0 auto;
-	}
-
-	.baidu-2 input {
-		padding: 13px 8px;
-		opacity: 0.9;
-		font-size: 15px;
-	}
-
-	#Select-2 {
-		float: left;
-	}
-
-	.Select-box-2 {
-		text-align: center;
-		float: left;
-		position: relative;
-	}
-
-	.Select-box-2 ul {
-		height: 46px;
-		position: absolute;
-		left: 0px;
-		top: 1px;
-		z-index: 9999;
-		background: rgba(255, 255, 255, 0.9);
-		border: 1px solid #ccc;
-		border-top: none;
-		overflow: hidden
-	}
-
-	.Select-box-2 li {
-		width: 60px;
-		line-height: 46px;
-		font-size: 15px;
-		color: #484848;
-		border: 0;
-		cursor: pointer;
-	}
-
-	.Select-box-2 li:hover {
-		background: #3385ff;
-		color: #FFF;
-	}
-
-	.Select-box-2 .this_s {
-		color: #317ef3;
-	}
-
-	.Select-box-2 .this_s:hover {
-		background: none;
-		color: #317ef3;
-	}
-
-	#kw-2 {
-		width: 335px;
-		outline: 0;
-		border: 1px solid #ccc;
-		background: rgba(255, 255, 255, 0.2);
-		color: #000000;
-		padding-left: 70px;
-		font-weight: bold;
-	}
-
-	#su-2 {
-		width: 90px;
-		background: blue;
-		border: none;
-		border-top: #3385ff 1px solid;
-		border-bottom: 1px solid #2d78f4;
-		color: #FFF;
-		cursor: pointer;
-		/*去轮廓阴影*/
-		outline: none;
-
-	}
-
-	#su-2:hover {
-		background: blue;
-		border-bottom: 1px solid blue;
-	}
-
-	#su-2:active {
-		background: blue;
-		box-shadow: inset 1px 1px 3px blue;
-		-webkit-box-shadow: inset 1px 1px 3px blue;
-	}
-
-
-	.jj-list {
-		width: 350px;
-		margin-right: 25px;
-		float: left;
-		margin-bottom: 20px;
-	}
-
-	.jj-list-tit {
-		font-size: 16px;
-		line-height: 25px;
-		color: #ffffff;
-		width: 100%;
-		padding-left: 38.5%;
-	}
-
-	.jj-list-con {
-		overflow: hidden;
-		margin: 0 auto
-	}
-
-	.jj-list-con li {
-		width: 31.333%;
-		margin: 1%;
-	}
-
-	.link-3 {
-		display: block;
-		background: rgba(0, 0, 0, .35);
-		color: #FFF;
-		font-size: 13px;
-		text-align: center;
-		line-height: 35px;
-		padding: 4px 0;
-		border-radius: 2px;
-		transition: all 0.2s
-	}
-
-	.link-3:hover {
-		background: rgba(0, 0, 0, .45);
-		font-size: 15px;
-		font-weight: bold
-	}
-
-	/*1栏 小于584*/
-	@media only screen and (max-width: 584px) {
-		.navi-height {
-			height: 1300px;
-		}
-
-		.link-box {
-			margin-top: 5%;
-		}
-
-		.large-screen {
-			display: none;
-		}
-
-	}
-
-	/* 2栏 大于584  小于993px */
-	@media only screen and (min-width: 584px) and (max-width: 993px){
-		.navi-height {
-			height: 800px;
-		}
-
-		.link-box {
-			margin-top: 5%;
-		}
-
-		.large-screen {
-			display: none;
-		}
-
-	}
-
-
-	/*3栏 大于993px*/
-	@media only screen and (min-width: 993px) {
-
-		.navi-height {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-
-		}
-	}
-
-	/* 隐藏footer */
-	/* .show-footer {
-		display: none;
-	} */
-	.page-footer {
-		display: none;
-	}
-</style>
-
-    </body>
+<!--  来自筱谢博客：www.1xie.xyz  -->
+</div>
+</div>
+<footer class="footer text-center bg-white">
+    <div class="container">
+		<span id="hitokoto">:D 获取中...</span>
+    </div>
+</footer>
+<div id="get-top" title="回到顶部" style="display: none;"><i class="icon icon-arrow-up"></i></div>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+<script src="js.js"></script>
+<script type="text/javascript" src="https://js.users.51.la/19916167.js"></script>
+</body>
 </html>
